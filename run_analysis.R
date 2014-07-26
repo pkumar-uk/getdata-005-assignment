@@ -119,6 +119,11 @@ vars1 <- cl1[4:length(cl1)]
 t <- melt(t_set,id=c("subjectCode","activityCode","activityLabel"),measure.vars=c(vars1))
 ## cast it again to have average of each variable
 tidy_set <-dcast(t,subjectCode + activityCode + activityLabel ~ variable, mean)
+## rename the labels to reflect the correct names
+aa <- names(tidy_set)
+for(i in 4:length(aa)) aa[i] <- paste("avg_of_",aa[i],sep="")
+names(tidy_set) <- aa
+
 
 ## save to file
 fdata1 <- "./tidy_dataset.txt"
