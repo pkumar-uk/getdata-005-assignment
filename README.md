@@ -20,6 +20,8 @@ be underneath it.
 
 Download run_analysis.R to your R working directory and run
 
+Note:- you should have reshape2 package
+
 After successfult run two TXT files in CSV format will be created with names
 -tidy_dataset.txt
 -t_dataset.txt

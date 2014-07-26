@@ -9,7 +9,7 @@ root1 <-"./UCI HAR Dataset"
 ##-----------------------------------------------
 ## Load data from files to memory
 ##-----------------------------------------------
-
+library(reshape2)
 ## Load y_train.txt
 ## train_y contains loaded values
 fdata1 <- paste(root1 , "/train/y_train.txt",sep="")
